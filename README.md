@@ -15,8 +15,8 @@ This documentation is valid for .gt3x files downloaded from the following device
 * wActiSleep-BT (serial numbers starting with MOS4)
 * GT9X Link (serial numbers starting with TAS) 
 
-    **NOTE:** Devices with serial numbers that start with "NEO" or "MRA" and have firmware version of 2.5.0 or earlier use an older format of the .gt3x file. Please see this GitHub repo for more information: https://github.com/actigraph/NHANES-GT3X-File-Format 
-    
+## Invalid .gt3x Files ##
+**NOTE:** Devices with serial numbers that start with "NEO" or "MRA" and have firmware version of 2.5.0 or earlier use an older format of the .gt3x file. Please see this GitHub repo for more information: https://github.com/actigraph/NHANES-GT3X-File-Format
 
 **Prepared By:**
 
