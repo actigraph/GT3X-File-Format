@@ -1,7 +1,7 @@
-# Activity Packet - ID 13 #
+# DEBUG Packet - ID 23 #
 
 ## Description ##
-cap sense state, 0 = off, 1 = on
+Reserved for debugging purposes.
 
 ## Format of Data ##
 

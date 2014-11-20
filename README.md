@@ -26,15 +26,15 @@ This documentation is valid for .gt3x files downloaded from the following device
    </tr>
    <tr>
       <td>wGT3X+</td>
-      <td><a href=wGT3X+/LogRecords.md>Log Records</a></td>
+      <td><a href=wGT3X+LogRecords.md>Log Records</a></td>
    </tr>
    <tr>
       <td>wGT3X-BT</td>
-      <td><a href=wGT3X-BT/LogRecords.md>Log Records</a></td>
+      <td><a href=wGT3X-BTLogRecords.md>Log Records</a></td>
    </tr>
    <tr>
       <td>ActiGraph Link</td>
-      <td><a href=Link/LogRecords.md>Log Records</a></td>
+      <td><a href=LinkLogRecords.md>Log Records</a></td>
    </tr>
 </table>
 
