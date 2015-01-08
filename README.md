@@ -81,7 +81,7 @@ Binary .gt3x file data is grouped into timestamped records of varying types that
    </tr>
    <tr>
       <td>1</td>
-      <td><a href=LogRecords/ANTPlus.md>ANT_PLUS</a></td>
+      <td>Spare</td>
       <td></td>
    </tr>
    <tr>
@@ -91,8 +91,8 @@ Binary .gt3x file data is grouped into timestamped records of varying types that
    </tr>
    <tr>
       <td>3</td>
-      <td><a href=LogRecords/Event.md>EVENT</a></td>
-      <td>0 = RTT Overflow, 1 = Unexpected Reset, 2 = Unhandled Event</td>
+      <td>Debug</td>
+      <td>This record type is used for internal testing. It should be ignored if encountered while parsing a file.</td>
    </tr>
    <tr>
       <td>4</td>
@@ -126,8 +126,8 @@ Binary .gt3x file data is grouped into timestamped records of varying types that
    </tr>
    <tr>
       <td>10</td>
-      <td><a href=LogRecords/DailySummary.md>DAILY_SUMMARY</a></td>
-      <td></td>
+      <td>DAILY_SUMMARY</td>
+      <td>These records were used internally for devices that provided daily summary data over wireless to restore from a power loss. They should be ignored when parsing a file.</td>
    </tr>
    <tr>
       <td>11</td>
@@ -146,8 +146,8 @@ Binary .gt3x file data is grouped into timestamped records of varying types that
    </tr>
    <tr>
       <td>14</td>
-      <td><a href=LogRecords/HeartRateBLE.md>HEART_RATE_BLE</a></td>
-      <td>Bluetooth heart rate information (BPM and RR)</td>
+      <td><a href="https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.heart_rate_measurement.xml">HEART_RATE_BLE</a></td>
+      <td>Bluetooth heart rate information (BPM and RR). This is a Bluetooth standard format.</td>
    </tr>
    <tr>
       <td>15</td>
@@ -161,23 +161,23 @@ Binary .gt3x file data is grouped into timestamped records of varying types that
    </tr>
    <tr>
       <td>17</td>
-      <td><a href=LogRecords/Imu9dof.md>IMU_9DOF</a></td>
-      <td>One second of raw IMU data (acceleration and gyroscope in that order) in XYZ order as 16-bit signed integers</td>
+      <td>Spare</a></td>
+      <td></td>
    </tr>
    <tr>
       <td>18</td>
-      <td><a href=LogRecords/Magnetometer.md>MAGNETOMETER</a></td>
-      <td>One second of raw magnetometer data as 16-bit signed integers</td>
+      <td>Spare</a></td>
+      <td></td>
    </tr>
    <tr>
       <td>19</td>
-      <td><a href=LogRecords/FifoError.md>FIFO_ERROR</a></td>
-      <td>Records timestamp of Fifo Errors</td>
+      <td>Debug</td>
+      <td>This record type is used for internal testing. It should be ignored if encountered while parsing a file.</td>
    </tr>
    <tr>
       <td>20</td>
-      <td><a href=LogRecords/FifoDump.md>FIFO_DUMP</a></td>
-      <td>FIFO diagnostic record recorded if enabled and an error is detected</td>
+      <td>Debug</td>
+      <td>This record type is used for internal testing. It should be ignored if encountered while parsing a file.</td>
    </tr>
    <tr>
       <td>21</td>
@@ -186,13 +186,14 @@ Binary .gt3x file data is grouped into timestamped records of varying types that
    </tr>
    <tr>
       <td>22</td>
-      <td><a href=LogRecords/ImuAccelerometer.md>IMU_ACCELEROMETER</a></td>
-      <td>One second of raw activity samples packed into 16-bit values in XYZ order. Refer to the IMU_ACCEL_SCALE variable for scaling.</td>
+      <td>18</td>
+      <td>Spare</a></td>
+      <td></td>
    </tr>
    <tr>
       <td>23</td>
-      <td><a href=LogRecords/Debug.md>DEBUG</a></td>
-      <td>Reserved for debugging purposes.</td>
+      <td>Debug</td>
+      <td>This record type is used for internal testing. It should be ignored if encountered while parsing a file.</td>
    </tr>
    <tr>
       <td>24</td>
