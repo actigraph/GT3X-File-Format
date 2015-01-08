@@ -68,6 +68,7 @@ Binary .gt3x file data is grouped into timestamped records of varying types that
 </table>
 
 ### Log Record Types ###
+Note that some undocumented records are used for internal state or testing. They may be safely ignored.
 <table>
    <tr>
       <th>ID</th>
@@ -80,19 +81,9 @@ Binary .gt3x file data is grouped into timestamped records of varying types that
       <td>One second of raw activity samples packed into 12-bit values in YXZ order</td>
    </tr>
    <tr>
-      <td>1</td>
-      <td>Spare</td>
-      <td></td>
-   </tr>
-   <tr>
       <td>2</td>
       <td><a href=LogRecords/Battery.md>BATTERY</a></td>
       <td>Battery voltage</td>
-   </tr>
-   <tr>
-      <td>3</td>
-      <td>Debug</td>
-      <td>This record type is used for internal testing. It should be ignored if encountered while parsing a file.</td>
    </tr>
    <tr>
       <td>4</td>
@@ -125,11 +116,6 @@ Binary .gt3x file data is grouped into timestamped records of varying types that
       <td></td>
    </tr>
    <tr>
-      <td>10</td>
-      <td>DAILY_SUMMARY</td>
-      <td>These records were used internally for devices that provided daily summary data over wireless to restore from a power loss. They should be ignored when parsing a file.</td>
-   </tr>
-   <tr>
       <td>11</td>
       <td><a href=LogRecords/HeartRateAnt.md>HEART_RATE_ANT</a></td>
       <td></td>
@@ -160,40 +146,9 @@ Binary .gt3x file data is grouped into timestamped records of varying types that
       <td>Taso epoch data</td>
    </tr>
    <tr>
-      <td>17</td>
-      <td>Spare</a></td>
-      <td></td>
-   </tr>
-   <tr>
-      <td>18</td>
-      <td>Spare</a></td>
-      <td></td>
-   </tr>
-   <tr>
-      <td>19</td>
-      <td>Debug</td>
-      <td>This record type is used for internal testing. It should be ignored if encountered while parsing a file.</td>
-   </tr>
-   <tr>
-      <td>20</td>
-      <td>Debug</td>
-      <td>This record type is used for internal testing. It should be ignored if encountered while parsing a file.</td>
-   </tr>
-   <tr>
       <td>21</td>
       <td><a href=LogRecords/Parameters.md>PARAMETERS</a></td>
       <td>Records various configuration parameters and device attributes on initialization.</td>
-   </tr>
-   <tr>
-      <td>22</td>
-      <td>18</td>
-      <td>Spare</a></td>
-      <td></td>
-   </tr>
-   <tr>
-      <td>23</td>
-      <td>Debug</td>
-      <td>This record type is used for internal testing. It should be ignored if encountered while parsing a file.</td>
    </tr>
    <tr>
       <td>24</td>
