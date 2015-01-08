@@ -45,7 +45,7 @@ Binary .gt3x file data is grouped into timestamped records of varying types that
         <td>2</td>
         <td>4</td>
         <td>Timestamp</td>
-        <td>The date and time of the data contained in the record are marked to the nearest second in [Unix time](http://en.wikipedia.org/wiki/Unix_time) format.</td>
+        <td>The date and time of the data contained in the record are marked to the nearest second in <a href="http://en.wikipedia.org/wiki/Unix_time">Unix time</a> format.</td>
     </tr>
     <tr>
         <td>6</td>
