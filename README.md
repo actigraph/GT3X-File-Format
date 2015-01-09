@@ -78,37 +78,32 @@ Note that some undocumented records are used for internal state or testing. They
    <tr>
       <td>0</td>
       <td><a href=LogRecords/Activity.md>ACTIVITY</a></td>
-      <td>One second of raw activity samples packed into 12-bit values in YXZ order</td>
+      <td>One second of raw activity samples packed into 12-bit values in YXZ order.</td>
    </tr>
    <tr>
       <td>2</td>
-      <td><a href=LogRecords/Battery.md>BATTERY</a></td>
-      <td>Battery voltage</td>
+      <td><a>BATTERY</a></td>
+      <td>Battery voltage in millivolts as a little-endian unsigned short (2 bytes).</td>
    </tr>
    <tr>
       <td>4</td>
-      <td><a href=LogRecords/HeartRateBPM.md>HEART_RATE_BPM</a></td>
-      <td></td>
+      <td><a>HEART_RATE_BPM</a></td>
+      <td>Heart rate average beats per minute (BPM) as one byte unsigned integer.</td>
    </tr>
    <tr>
       <td>5</td>
-      <td><a href=LogRecords/Lux.md>LUX</a></td>
-      <td>Lux</td>
+      <td><a>LUX</a></td>
+      <td>Lux value as a little-endian unsigned short (2 bytes).</td>
    </tr>
    <tr>
       <td>6</td>
       <td><a href=LogRecords/Metadata.md>METADATA</a></td>
-      <td>Arbitrary metadata content</td>
+      <td>Arbitrary metadata content. The first record in every log is contains subject data in JSON format.</td>
    </tr>
    <tr>
       <td>7</td>
       <td><a href=LogRecords/Tag.md>TAG</a></td>
       <td>13 Byte Serial, 1 Byte Tx Power, 1 Byte (signed) RSSI</td>
-   </tr>
-   <tr>
-      <td>8</td>
-      <td><a href=LogRecords/Temperature.md>TEMPERATURE</a></td>
-      <td></td>
    </tr>
    <tr>
       <td>9</td>
