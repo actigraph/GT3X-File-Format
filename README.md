@@ -165,4 +165,4 @@ Note that some undocumented records are used for internal state or testing. They
 **Prepared By:**
 
 * [Daniel Judge](https://github.com/dwjref "Daniel's GitHub Profile") - Software Architect
-* [Judge Maygarden](https://github.com/jmaygarden "Judge's GitHub Profile") - Hardware/Firmware Engineer
+* [Judge Maygarden](https://github.com/jmaygarden "Judge's GitHub Profile") - Firmware Engineer
