@@ -26,6 +26,32 @@ public class SensorSchema
 	}
 }
 
+public class SensorColumn
+{
+	public bool IsBigEndian { get; set; }
+	public bool IsSigned { get; set; }
+
+	/// <summary>
+	/// Bit offset for the start of this column within the sample.
+	/// </summary>
+	public byte Offset { get; set; }
+
+	/// <summary>
+	/// Bit size of this column within the samples.
+	/// </summary>
+	public byte Size { get; set; }
+
+	/// <summary>
+	/// An SSP encoded floating-point scale factor for the column value. Devide the encoded value by this number to get the output in the proper units.
+	/// </summary>
+	public double ScaleFactor { get; set; }
+
+	/// <summary>
+	/// A fixed-length whitespace-padded ASCII string containing a human-readable name for the column suitable for use in a CSV output.
+	/// </summary>
+	public string Label { get; set; }
+}
+
 int id = BitConverter.ToInt16(Payload, 0);
 int columns = BitConverter.ToInt16(Payload, 2);
 int samples = BitConverter.ToInt16(Payload, 4);
