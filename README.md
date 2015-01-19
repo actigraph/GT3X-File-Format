@@ -178,7 +178,7 @@ Note that some undocumented records are used for internal state or testing. They
    </tr>
    <tr>
       <td>14</td>
-      <td><a href="https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.heart_rate_measurement.xml">HEART_RATE_BLE</a></td>
+      <td><a href=LogRecords/HeartRateBLE.md>HEART_RATE_BLE</a></td>
       <td>Bluetooth heart rate information (BPM and RR). This is a Bluetooth standard format.</td>
    </tr>
    <tr>
