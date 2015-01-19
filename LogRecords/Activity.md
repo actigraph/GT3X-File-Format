@@ -17,7 +17,7 @@ To convert the 12-bit values to 16-bit signed integers (Int16) for use, they mus
 Once a sample has been unpacked and the special conditions are accounted for, we must:
 
 1. Cast the UInt16 values into *signed* 16-bit values. 
-2. Scale the resultant by 341.0 (this gives us an acceleration value in G's).
+2. Scale the resultant by the scale factor (this gives us an acceleration value in g's). Device serial numbers starting with NEO and CLE use a scale factor of 341 LSB/g (±6g). MOS devices use a 256 LSB/g scale factor (±8g). If a LOG_PARAMETER record is preset, then the ACCEL_SCALE value should be used.
 3. Round the value from #2 to three decimal places.
 
 ## Example ##
