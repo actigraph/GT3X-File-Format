@@ -5,9 +5,9 @@ One second of raw activity samples packed into 12-bit values in YXZ order. Activ
 
 To help conserve space, activity samples are bit-packed. A single 3-axis sample takes up 36 bits of data (12 bits per axis). To parse this data, you will have to portion the byte data into nibbles.
 
-The activity samples are encoded as 12-bit two’s complement values. Two’s complement is the standard signed integer encoding used in modern architectures.
+The activity samples are encoded as 12-bit two's complement values. Two's complement is the standard signed integer encoding used in modern architectures.
 
-To convert the 12-bit values to 16-bit signed integers (Int16) for use, they must be sign-extended. Endianness doesn’t exactly apply for 12-bit values, but it is basically big-endian. In other words, the bits are in order from most-significant to least-significant.
+To convert the 12-bit values to 16-bit signed integers (Int16) for use, they must be sign-extended. Endianness doesn't exactly apply for 12-bit values, but it is basically big-endian. In other words, the bits are in order from most-significant to least-significant.
 
 ## Special Conditions for Activity Values ##
 1. If an axis value is greater than 2047, you need to bitwise OR it with 0xF000 (or just add 61440 to the value). This is the sign-extension from above.
@@ -146,10 +146,10 @@ We have a .gt3x file with the following information:
 ## C# Source Code Example ##
 See the method ParseAcceleration(Stream stream) in [Gt3xFile.cs](../blob/master/src/GT3X.Parsing.Library/Gt3xFile.cs)
 
-    ```c#
-    /// <summary> Parse activity data from a stream of data </summary>
-    /// <param name="stream">The activity.bin stream of data to parse.</param>
-    /// <returns>All of the activity samples in a stream.</returns>
+```c#
+/// <summary> Parse activity data from a stream of data </summary>
+/// <param name="stream">The activity.bin stream of data to parse.</param>
+/// <returns>All of the activity samples in a stream.</returns>
 private IEnumerable<AccelerationSample> ParseAcceleration(Stream stream)
 {
     if (!stream.CanRead)
@@ -218,4 +218,3 @@ private IEnumerable<AccelerationSample> ParseAcceleration(Stream stream)
     }
 }
 ```
-
