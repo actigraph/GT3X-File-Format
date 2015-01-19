@@ -144,7 +144,6 @@ We have a .gt3x file with the following information:
 *binary values that are have <s>strikethrough</s> are the nibbles that are ignored.
 
 ## C# Source Code Example ##
-See the method ParseAcceleration(Stream stream) in [Gt3xFile.cs](../blob/master/src/GT3X.Parsing.Library/Gt3xFile.cs)
 
 ```c#
 /// <summary> Parse activity data from a stream of data </summary>
