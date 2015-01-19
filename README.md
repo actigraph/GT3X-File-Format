@@ -157,19 +157,9 @@ Note that some undocumented records are used for internal state or testing. They
       <td>13 Byte Serial, 1 Byte Tx Power, 1 Byte (signed) RSSI</td>
    </tr>
    <tr>
-      <td>9</td>
-      <td><a href=LogRecords/Epoch.md>EPOCH</a></td>
-      <td></td>
-   </tr>
-   <tr>
       <td>11</td>
       <td><a href=LogRecords/HeartRateAnt.md>HEART_RATE_ANT</a></td>
       <td></td>
-   </tr>
-   <tr>
-      <td>12</td>
-      <td><a href=LogRecords/Epoch2.md>EPOCH2</a></td>
-      <td>Cletus & Moses epoch data</td>
    </tr>
    <tr>
       <td>13</td>
@@ -180,16 +170,6 @@ Note that some undocumented records are used for internal state or testing. They
       <td>14</td>
       <td><a href=LogRecords/HeartRateBLE.md>HEART_RATE_BLE</a></td>
       <td>Bluetooth heart rate information (BPM and RR). This is a Bluetooth standard format.</td>
-   </tr>
-   <tr>
-      <td>15</td>
-      <td><a href=LogRecords/Epoch3.md>EPOCH3</a></td>
-      <td>Moses epoch data</td>
-   </tr>
-   <tr>
-      <td>16</td>
-      <td><a href=LogRecords/Epoch4.md>EPOCH4</a></td>
-      <td>Taso epoch data</td>
    </tr>
    <tr>
       <td>21</td>
