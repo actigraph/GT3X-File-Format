@@ -23,10 +23,10 @@ Offset(d) 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15
 ```
 
 ### Header ###
-Seperator - 0x1E at offset 00
-Type - 0x06 at offset 01
-Timestamps - 0x71E8B454 at offset 02 (1421142129 or 1/13/2015 09:42:09)
-Size - 0x7C00 at offset 06 (124)
+* Seperator - 0x1E at offset 00
+* Type - 0x06 at offset 01
+* Timestamps - 0x71E8B454 at offset 02 (1421142129 or 1/13/2015 09:42:09)
+* Size - 0x7C00 at offset 06 (124)
 
 ### Payload ###
 
