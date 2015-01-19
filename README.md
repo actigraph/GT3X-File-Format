@@ -28,46 +28,97 @@ Binary .gt3x file data is grouped into timestamped records of varying types that
         <th>Size (bytes)</th>
         <th>Name</th>
         <th>Description</th>
+		<th>Part of Record</th>
     </tr>
     <tr>
         <td>0</td>
         <td>1</td>
         <td>Seperator</td>
         <td>An ASCII record separator byte (1Eh) marks the beginning of each log record.</td>
+		<td>Header</td>
     </tr>
     <tr>
         <td>1</td>
         <td>1</td>
         <td>Type</td>
         <td>A type identifier is used to interpret the payload of the record.</td>
+		<td>Header</td>
     </tr>
     <tr>
         <td>2</td>
         <td>4</td>
         <td>Timestamp</td>
         <td>The date and time of the data contained in the record are marked to the nearest second in <a href="http://en.wikipedia.org/wiki/Unix_time">Unix time</a> format.</td>
+		<td>Header</td>
     </tr>
     <tr>
         <td>6</td>
         <td>2</td>
         <td>Size</td>
         <td>The size of the payload is given in bytes as an little-endian unsigned integer.</td>
+		<td>Header</td>
     </tr>
     <tr>
         <td>8</td>
         <td>n</td>
         <td>Payload</td>
         <td>This is the actual data that varies based on the record *Type* field. It's size is provided in the *Size* field. Please refer to the appropriate section for the record type for the indiviual payload formats.</td>
+		<td>Payload</td>
     </tr>
     <tr>
         <td>8 + n</td>
         <td>1</td>
         <td>Checksum</td>
         <td>A 1-byte checksum immediately follows the record payload. It is a 1's complement, exclusive-or (XOR) of the log header and payload with an initial value of zero.</td>
+		<td>Checksum</td>
     </tr>
 </table>
 
+### Sample Header ###
+````
+1E 06 71 E8 B4 54 7C 00
+````
+<table>
+    <tr>
+        <th>Offset (bytes)</th>
+        <th>Size (bytes)</th>
+        <th>Name</th>
+        <th>Bytes from Sample</th>
+		<th>Resultant Value</th>
+    </tr>
+	<tr>
+        <td>0</td>
+        <td>1</td>
+        <td>Seperator</td>
+        <td>0x1E</td>
+		<td>0x1E</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>Type</td>
+        <td>0x06</td>
+		<td>6 (see Metadata below)</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>4</td>
+        <td>Timestamp</td>
+        <td>0x71 0xE8 0xB4 0x54</td>
+		<td>1421142129 or 2015/01/13 09:42:09</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>2</td>
+        <td>Size</td>
+        <td>0x7C 0x00</td>
+		<td>124</td>
+    </tr>
+</table>
+
+
 ### Log Record Types ###
+
 Note that some undocumented records are used for internal state or testing. They may be safely ignored.
 <table>
    <tr>
