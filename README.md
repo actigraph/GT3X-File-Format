@@ -193,6 +193,32 @@ Note that some undocumented records are used for internal state or testing. They
    </tr>
 </table>
 
+### Checksum Calculation ###
+A 1-byte checksum immediately follows the record payload. It is a 1's complement, exclusive-or (XOR) of the log header and payload with an initial value of zero.
+
+To verify you have parsed a packet correctly, calculate the checksum and compare it against the last byte of the packet.
+
+#### Sample C# Checksum Code #
+```c#
+byte chkSum = Header.Sync;
+chkSum ^= Header.Type;
+var timestamp = DeviceUtilities.DateTime.ToUnixTime(Header.TimeStamp);
+chkSum ^= (byte)(timestamp & 0xFF);
+chkSum ^= (byte)((timestamp >> 8) & 0xFF);
+chkSum ^= (byte)((timestamp >> 16) & 0xFF);
+chkSum ^= (byte)((timestamp >> 24) & 0xFF);
+chkSum ^= (byte)(Header.Size & 0xFF);
+chkSum ^= (byte)((Header.Size >> 8) & 0xFF);
+for (int i = 0; i < Payload.Length; ++i)
+    chkSum ^= Payload[i];
+chkSum = (byte)~chkSum;
+
+public UInt32 ToUnixTime(DateTime datetime)
+{
+    return (UInt32)(datetime - EPOCH).TotalSeconds;
+}
+```
+
 **Prepared By:**
 
 * [Daniel Judge](https://github.com/dwjref "Daniel's GitHub Profile") - Software Architect
