@@ -159,7 +159,7 @@ Note that some undocumented records are used for internal state or testing. They
    <tr>
       <td>11</td>
       <td><a href=LogRecords/HeartRateAnt.md>HEART_RATE_ANT</a></td>
-      <td></td>
+      <td>Heart Rate RR information from ANT+ sensor.</td>
    </tr>
    <tr>
       <td>13</td>
