@@ -18,7 +18,7 @@ The TAG payload consist of multiple records per detected beacon. Each record is 
 
 <table>
 <tr>
-<th>Device</th>
+<th>Beacon</th>
 <th>Serial Number</th>
 <th>TX Power (dB)</th>
 <th>RSSI (dB)</th>
