@@ -444,7 +444,7 @@ namespace DeviceUtilities
     <td>FEATURE_CAPABILITIES</td>
     <td>int</td>
     <td>
-    <ul>
+    <ul style="list-style-type:none">
     <li>Bit 0 = Heart Rate Monitor</li>
     <li>Bit 1 = Data Summary</li>
     <li>Bit 2 = Sleep Mode</li>
@@ -465,7 +465,7 @@ namespace DeviceUtilities
     <td>DISPLAY_CAPABILITIES</td>
     <td>int</td>
     <td>
-    <ul>
+    <ul style="list-style-type:none">
     <li>Bit 0 = Display On/Off</li>
     <li>Bit 1 = 12/24-hour Time</li>
     <li>Bit 2 = Feedback On/Off</li>
@@ -564,7 +564,7 @@ namespace DeviceUtilities
     <td>FEATURE_ENABLE</td>
     <td>int</td>
     <td>
-    <ul>
+    <ul style="list-style-type:none">
     <li>Bit 0 = Heart Rate Monitor</li>
     <li>Bit 1 = Data Summary</li>
     <li>Bit 2 = Sleep Mode</li>
@@ -582,7 +582,7 @@ namespace DeviceUtilities
     <td>DISPLAY_CONFIGURATION</td>
     <td>int</td>
     <td>
-    <ul>
+    <ul style="list-style-type:none">
     <li>Bit 0 = Display On/Off (0=Off, 1=On)</li>
     <li>Bit 1 = 12/24-hour Time (0=12, 1=24)</li>
     <li>Bit 2 = Feedback On/Off (0=Off, 1=On)</li>
@@ -832,7 +832,7 @@ namespace DeviceUtilities
     <td>SENSOR_CONFIGURATION</td>
     <td>int</td>
     <td>
-    <ul>
+    <ul style="list-style-type:none">
     <li>Bit 0 = IMU Accelerometer</li>
     <li>Bit 1 = IMU Gyroscope</li>
     <li>Bit 2 = IMU Magnetometer</li>
