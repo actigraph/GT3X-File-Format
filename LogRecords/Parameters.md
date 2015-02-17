@@ -443,15 +443,20 @@ namespace DeviceUtilities
     <td>28</td>
     <td>FEATURE_CAPABILITIES</td>
     <td>int</td>
-    <td>Bit 0 = Heart Rate Monitor,
-Bit 1 = Data Summary,
-Bit 2 = Sleep Mode,
-Bit 3 = Proximity Tagging,
-Bit 4 = Epoch Data,
-Bit 5 = No Raw Data,
-Bit 6 = IMU,
-Bit 7 = Spare,
-Bit 8 = Configurable Proximity Interval</td>
+    <td>
+    <p>Bit Fields</p>
+    <ol>
+    <li>Heart Rate Monitor</li>
+    <li>Data Summary</li>
+    <li>Sleep Mode</li>
+    <li>Proximity Tagging</li>
+    <li>Epoch Data</li>
+    <li>No Raw Data</li>
+    <li>IMU</li>
+    <li>Spare</li>
+    <li>Configurable Proximity Interval</li>
+    </ol>
+    </td>
     <td></td>
     <td>Reports the supported features of this hardware/firmware configuration.</td>
 </tr>
