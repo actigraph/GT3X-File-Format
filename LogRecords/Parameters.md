@@ -369,7 +369,7 @@ namespace DeviceUtilities
     </tr>
     <tr>
         <td><pre>9B</pre></td>
-        <td>checksum</td>
+        <td>Checksum</td>
     </tr>
 </table>
 
@@ -389,12 +389,7 @@ namespace DeviceUtilities
     <td>6</td>
     <td>BATTERY_STATE</td>
     <td>int</td>
-    <td>0 = BATTERY_CHARGING    
-1 = BATTERY_CHARGED
-2 = BATTERY_NORMAL
-3 = BATTERY_WARN
-4 = BATTERY_SHUTDOWN
-5 = BATTERY_FAULT</td>
+    <td><ol><li>BATTERY_CHARGING</li><li>BATTERY_CHARGED</li><li>BATTERY_NORMAL</li><li>BATTERY_WARN</li><li>BATTERY_SHUTDOWN</li><li>BATTERY_FAULT</li></ol></td>
     <td></td>
     <td>Returns the current state of the battery</td>
 </tr>
