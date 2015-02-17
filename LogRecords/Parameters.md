@@ -8,6 +8,98 @@ The content of this record may vary in number and types of variables. It is safe
 ## Format of Data ##
 The record payload is of variable length consisting of 8-byte key/value pairs. The key is made up of a 16-bit unsigned address space and 16-bit unsigned identifier. All values are encoded in a 32-bit unsigned integer. The address space, identifier and value are in little-endian byte order.
 
+Floating point values are encoded using a three-byte fraction and one-byte exponent. The fraction is a two’s-complement integer; its absolute value is 2<sup>23</sup> times the floating-point value’s mantissa (which is always between 0.5 inclusive and 1.0 not inclusive, i.e. the floating-point value is normalized), and its sign is that of the floating-point value. The exponent is a two’s-complement 8-bit number, signifying a power of 2 from -128 to +127. A zero value is represented by fraction and exponent both zero. The following C# code performs the described floating-point encoding and decoding.
+
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace DeviceUtilities
+{
+    public class SspCodec
+    {
+        const double FLOAT_MINIMUM = 0.00000011920928955078125;  /* 2^-23 */
+        const double FLOAT_MAXIMUM = 8388608.0;                  /* 2^23  */
+        const UInt32 ENCODED_MINIMUM = 0x00800000;
+        const UInt32 ENCODED_MAXIMUM = 0x007FFFFF;
+        const UInt32 SIGNIFICAND_MASK = 0x00FFFFFFu;
+        const int EXPONENT_MINIMUM = -128;
+        const int EXPONENT_MAXIMUM = 127;
+        const UInt32 EXPONENT_MASK = 0xFF000000u;
+        const int EXPONENT_OFFSET = 24;
+
+        public static double Decode(UInt32 value)
+        {
+            double significand;
+            double exponent;
+            Int32 i32;
+
+            /* handle numbers that are too big */
+            if (ENCODED_MAXIMUM == value)
+                return double.MaxValue;
+            else if (ENCODED_MINIMUM == value)
+                return -double.MaxValue;
+
+            /* extract the exponent */
+            i32 = (Int32) ((value & EXPONENT_MASK) >> EXPONENT_OFFSET);
+            if (0 != (i32 & 0x80))
+                i32 = (Int32)((UInt32)i32 | 0xFFFFFF00u);
+            exponent = (double)i32;
+
+            /* extract the significand */
+            i32 = (Int32)(value & SIGNIFICAND_MASK);
+            if (0 != (i32 & ENCODED_MINIMUM))
+                i32 = (Int32)((UInt32)i32 | 0xFF000000u);
+            significand = (double)i32 / FLOAT_MAXIMUM;
+
+            /* calculate the floating point value */
+            return significand * Math.Pow(2.0, exponent);
+        }
+
+        public static UInt32 Encode(double f)
+        {
+            double significand;
+            UInt32 code;
+            int exponent;
+
+            /* check for zero values */
+            significand = Math.Abs(f);
+            if (FLOAT_MINIMUM > significand)
+                return 0;
+
+            /* normalize the number */
+            exponent = 0;
+            while (1.0 <= significand)
+            {
+                significand /= 2.0;
+                exponent += 1;
+            }
+            while (0.5 > significand)
+            {
+                significand *= 2.0;
+                exponent -= 1;
+            }
+
+            /* handle numbers that are too big */
+            if (EXPONENT_MAXIMUM < exponent)
+                return ENCODED_MAXIMUM;
+            else if (EXPONENT_MINIMUM > exponent)
+                return ENCODED_MINIMUM;
+
+            /* pack the exponent and significand */
+            code = (UInt32)(significand * FLOAT_MAXIMUM);
+            if (0.0 > f)
+                code = (UInt32)(-(Int32)code);
+            code &= SIGNIFICAND_MASK;
+            code |= ((UInt32)exponent << EXPONENT_OFFSET) & EXPONENT_MASK;
+
+            return code;
+        }
+    }
+}
+</pre>
 
 ## Example ##
 
