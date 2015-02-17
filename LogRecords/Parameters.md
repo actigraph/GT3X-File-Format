@@ -205,167 +205,167 @@ namespace DeviceUtilities
     </tr>
     <tr>
         <td><pre>00 00 1D 00 07 00 00 00</pre></td>
-        <td></td>
+        <td>DISPLAY_CAPABILITIES: display on/off, 12/24-hour time and feedback on/off</td>
     </tr>
     <tr>
         <td><pre>00 00 20 00 01 00 01 01</pre></td>
-        <td></td>
+        <td>WIRELESS_FIRMWARE_VERSION: 01.01.01</td>
     </tr>
     <tr>
         <td><pre>00 00 25 00 00 04 00 00</pre></td>
-        <td></td>
+        <td>Ignore</td>
     </tr>
     <tr>
         <td><pre>00 00 26 00 00 00 00 00</pre></td>
-        <td></td>
+        <td>Ignore</td>
     </tr>
     <tr>
         <td><pre>00 00 31 00 00 00 40 0C</pre></td>
-        <td></td>
+        <td>IMU_ACCEL_SCALE: 2048 LSB/g</td>
     </tr>
     <tr>
         <td><pre>00 00 32 00 37 89 41 05</pre></td>
-        <td></td>
+        <td>IMU_GYRO_SCALE: 16.384 LSB/dps</td>
     </tr>
     <tr>
         <td><pre>00 00 33 00 07 3A 6D 03</pre></td>
-        <td></td>
+        <td>IMU_MAG_SCALE: 6.827 LSB/µT</td>
     </tr>
     <tr>
         <td><pre>00 00 37 00 00 00 40 09</pre></td>
-        <td></td>
+        <td>ACCEL_SCALE: 256 LSB/g</td>
     </tr>
     <tr>
         <td><pre>00 00 39 00 AE 77 53 09</pre></td>
-        <td></td>
+        <td>IMU_TEMP_SCALE: 333.87 LSB/°C</td>
     </tr>
     <tr>
         <td><pre>00 00 3A 00 00 00 54 05</pre></td>
-        <td></td>
+        <td>IMU_TEMP_OFFSET: 21 °C</td>
     </tr>
     <tr>
         <td><pre>01 00 00 00 00 00 00 00</pre></td>
-        <td></td>
+        <td>WIRELESS_MODE: Disabled</td>
     </tr>
     <tr>
         <td><pre>01 00 01 00 44 D4 12 AF</pre></td>
-        <td></td>
+        <td>WIRELESS_SERIAL_NUMBER: 2937246788</td>
     </tr>
     <tr>
         <td><pre>01 00 02 00 14 01 00 00</pre></td>
-        <td></td>
+        <td>FEATURE_ENABLE: sleep mode, epoch data</td>
     </tr>
     <tr>
         <td><pre>01 00 03 00 07 00 00 00</pre></td>
-        <td></td>
+        <td>DISPLAY_CONFIGURATION: display on, 24-hour time, feedback on</td>
     </tr>
     <tr>
         <td><pre>01 00 04 00 49 FF FF FF</pre></td>
-        <td></td>
+        <td>NEGATIVE_G_OFFSET_X: -183</td>
     </tr>
     <tr>
         <td><pre>01 00 05 00 1A FF FF FF</pre></td>
-        <td></td>
+        <td>NEGATIVE_G_OFFSET_Y: -230</td>
     </tr>
     <tr>
         <td><pre>01 00 06 00 52 FF FF FF</pre></td>
-        <td></td>
+        <td>NEGATIVE_G_OFFSET_Z: -174</td>
     </tr>
     <tr>
         <td><pre>01 00 07 00 31 01 00 00</pre></td>
-        <td></td>
+        <td>POSITIVE_G_OFFSET_X: 305</td>
     </tr>
     <tr>
         <td><pre>01 00 08 00 20 01 00 00</pre></td>
-        <td></td>
+        <td>POSITIVE_G_OFFSET_Y: 288</td>
     </tr>
     <tr>
         <td><pre>01 00 09 00 24 01 00 00</pre></td>
-        <td></td>
+        <td>POSITIVE_G_OFFSET_Z: 292</td>
     </tr>
     <tr>
         <td><pre>01 00 0A 00 1E 00 00 00</pre></td>
-        <td></td>
+        <td>SAMPLE_RATE: 30 Hz</td>
     </tr>
     <tr>
         <td><pre>01 00 0C 00 E0 25 D2 54</pre></td>
-        <td></td>
+        <td>TARGET_START_TIME: Wed, 04 Feb 2015 14:00:00 GMT</td>
     </tr>
     <tr>
         <td><pre>01 00 0D 00 70 85 D3 54</pre></td>
-        <td></td>
+        <td>TARGET_STOP_TIME: Thu, 05 Feb 2015 15:04:16 GMT</td>
     </tr>
     <tr>
         <td><pre>01 00 0E 00 F2 24 D2 54</pre></td>
-        <td></td>
+        <td>TIME_OF_DAY: Wed, 04 Feb 2015 13:56:02 GMT</td>
     </tr>
     <tr>
         <td><pre>01 00 0F 00 44 00 00 00</pre></td>
-        <td></td>
+        <td>ZERO_G_OFFSET_X: 68</td>
     </tr>
     <tr>
         <td><pre>01 00 10 00 1F 00 00 00</pre></td>
-        <td></td>
+        <td>ZERO_G_OFFSET_Y: 31</td>
     </tr>
     <tr>
         <td><pre>01 00 11 00 3F 00 00 00</pre></td>
-        <td></td>
+        <td>ZERO_G_OFFSET_Z: 63</td>
     </tr>
     <tr>
         <td><pre>01 00 14 00 00 00 00 00</pre></td>
-        <td></td>
+        <td>HRM_SERIAL_NUMBER_H: 0</td>
     </tr>
     <tr>
         <td><pre>01 00 15 00 00 00 00 00</pre></td>
-        <td></td>
+        <td>HRM_SERIAL_NUMBER_L: 0</td>
     </tr>
     <tr>
         <td><pre>01 00 21 00 60 EA 00 00</pre></td>
-        <td></td>
+        <td>PROXIMITY_INTERVAL: 59910 seconds (Note: This value is typically 60 seconds.)</td>
     </tr>
     <tr>
         <td><pre>01 00 22 00 1E F8 FF FF</pre></td>
-        <td></td>
+        <td>IMU_NEGATIVE_G_OFFSET_X: -2018</td>
     </tr>
     <tr>
         <td><pre>01 00 23 00 A7 F7 FF FF</pre></td>
-        <td></td>
+        <td>IMU_NEGATIVE_G_OFFSET_Y: -2137</td>
     </tr>
     <tr>
         <td><pre>01 00 24 00 DC F7 FF FF</pre></td>
-        <td></td>
+        <td>IMU_NEGATIVE_G_OFFSET_Z: -2084</td>
     </tr>
     <tr>
         <td><pre>01 00 25 00 1D 08 00 00</pre></td>
-        <td></td>
+        <td>IMU_POSITIVE_G_OFFSET_X: 2077</td>
     </tr>
     <tr>
         <td><pre>01 00 26 00 A4 07 00 00</pre></td>
-        <td></td>
+        <td>IMU_POSITIVE_G_OFFSET_Y: 1956</td>
     </tr>
     <tr>
         <td><pre>01 00 27 00 00 08 00 00</pre></td>
-        <td></td>
+        <td>IMU_POSITIVE_G_OFFSET_Z: 2048</td>
     </tr>
     <tr>
         <td><pre>01 00 28 00 00 00 00 00</pre></td>
-        <td></td>
+        <td>UTC_OFFSET: 0 seconds</td>
     </tr>
     <tr>
         <td><pre>01 00 29 00 00 00 00 00</pre></td>
-        <td></td>
+        <td>IMU_ZERO_G_OFFSET_X: 0</td>
     </tr>
     <tr>
         <td><pre>01 00 2A 00 FE FF FF FF</pre></td>
-        <td></td>
+        <td>IMU_ZERO_G_OFFSET_Y: -2</td>
     </tr>
     <tr>
         <td><pre>01 00 2B 00 37 00 00 00</pre></td>
-        <td></td>
+        <td>IMU_ZERO_G_OFFSET_Z: 55</td>
     </tr>
     <tr>
         <td><pre>01 00 2C 00 00 00 00 00</pre></td>
-        <td></td>
+        <td>SENSOR_CONFIGURATION: IMU off</td>
     </tr>
     <tr>
         <td><pre>9B</pre></td>
@@ -483,33 +483,11 @@ Bit 3 = kcals On/Off</td>
 </tr>
 <tr>
     <td>0</td>
-    <td>37</td>
-    <td>WIRELESS_STATE</td>
-    <td>int</td>
-    <td>Bits 0 -> 7 (CC2541)
-0 = Idle
-1 = Central
-2 = Peripheral
-3 = Test
-Bits 8 -> 15 (Atmel)
-0 = Init
-1 = Firmware Request
-2 = Active
-3 = Test
-4 = Deep Sleep
-5 = Peripheral Sleep
-6 = Request Bootloader
-7 = Bootloader</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>0</td>
     <td>49</td>
     <td>IMU_ACCEL_SCALE</td>
     <td>float</td>
     <td></td>
-    <td></td>
+    <td>LSB/g</td>
     <td>Scale factor for conversion to acceleration normalized to g.</td>
 </tr>
 <tr>
@@ -518,7 +496,7 @@ Bits 8 -> 15 (Atmel)
     <td>IMU_GYRO_SCALE</td>
     <td>float</td>
     <td></td>
-    <td></td>
+    <td>LSB/dps</td>
     <td>Scale factor for conversion to degrees/second.</td>
 </tr>
 <tr>
@@ -527,7 +505,7 @@ Bits 8 -> 15 (Atmel)
     <td>IMU_MAG_SCALE</td>
     <td>float</td>
     <td></td>
-    <td></td>
+    <td>LSB/µT</td>
     <td>Scale factor for conversion to microTesla.</td>
 </tr>
 <tr>
