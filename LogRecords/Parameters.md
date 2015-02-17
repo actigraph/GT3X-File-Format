@@ -8,7 +8,9 @@ The content of this record may vary in number and types of variables. It is safe
 ## Format of Data ##
 The record payload is of variable length consisting of 8-byte key/value pairs. The key is made up of a 16-bit unsigned address space and 16-bit unsigned identifier. All values are encoded in a 32-bit unsigned integer. The address space, identifier and value are in little-endian byte order.
 
-Floating point values are encoded using a three-byte fraction and one-byte exponent. The fraction is a two’s-complement integer; its absolute value is 2<sup>23</sup> times the floating-point value’s mantissa (which is always between 0.5 inclusive and 1.0 not inclusive, i.e. the floating-point value is normalized), and its sign is that of the floating-point value. The exponent is a two’s-complement 8-bit number, signifying a power of 2 from -128 to +127. A zero value is represented by fraction and exponent both zero. The following C# code performs the described floating-point encoding and decoding.
+Floating point values are encoded using a three-byte fraction and one-byte exponent. The fraction is a two’s-complement integer; its absolute value is 2<sup>23</sup> times the floating-point value’s mantissa (which is always between 0.5 inclusive and 1.0 not inclusive, i.e. the floating-point value is normalized), and its sign is that of the floating-point value. The exponent is a two’s-complement 8-bit number, signifying a power of 2 from -128 to +127. A zero value is represented by fraction and exponent both zero.
+
+The following C# code performs the described floating-point encoding and decoding:
 
 <pre>
 using System;
@@ -29,7 +31,9 @@ namespace DeviceUtilities
         const int EXPONENT_MAXIMUM = 127;
         const UInt32 EXPONENT_MASK = 0xFF000000u;
         const int EXPONENT_OFFSET = 24;
+</pre>
 
+<pre>
         public static double Decode(UInt32 value)
         {
             double significand;
@@ -57,7 +61,9 @@ namespace DeviceUtilities
             /* calculate the floating point value */
             return significand * Math.Pow(2.0, exponent);
         }
+</pre>
 
+<pre>
         public static UInt32 Encode(double f)
         {
             double significand;
@@ -98,6 +104,9 @@ namespace DeviceUtilities
             return code;
         }
     }
+</pre>
+
+<pre>
 }
 </pre>
 
