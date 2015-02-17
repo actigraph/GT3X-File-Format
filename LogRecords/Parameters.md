@@ -445,15 +445,15 @@ namespace DeviceUtilities
     <td>int</td>
     <td>
     <ul>
-    <li>Bit 0 - Heart Rate Monitor</li>
-    <li>Bit 1 - Data Summary</li>
-    <li>Bit 2 - Sleep Mode</li>
-    <li>Bit 3 - Proximity Tagging</li>
-    <li>Bit 4 - Epoch Data</li>
-    <li>Bit 5 - No Raw Data</li>
-    <li>Bit 6 - IMU</li>
-    <li>Bit 7 - Spare</li>
-    <li>Bit 8 - Configurable Proximity Interval</li>
+    <li>Bit 0 = Heart Rate Monitor</li>
+    <li>Bit 1 = Data Summary</li>
+    <li>Bit 2 = Sleep Mode</li>
+    <li>Bit 3 = Proximity Tagging</li>
+    <li>Bit 4 = Epoch Data</li>
+    <li>Bit 5 = No Raw Data</li>
+    <li>Bit 6 = IMU</li>
+    <li>Bit 7 = Spare</li>
+    <li>Bit 8 = Configurable Proximity Interval</li>
     </ul>
     </td>
     <td></td>
@@ -464,10 +464,14 @@ namespace DeviceUtilities
     <td>29</td>
     <td>DISPLAY_CAPABILITIES</td>
     <td>int</td>
-    <td>Bit 0 = Display On/Off
-Bit 1 = 12/24-hour Time
-Bit 2 = Feedback On/Off
-Bit 3 = kcals On/Off</td>
+    <td>
+    <ul>
+    <li>Bit 0 = Display On/Off</li>
+    <li>Bit 1 = 12/24-hour Time</li>
+    <li>Bit 2 = Feedback On/Off</li>
+    <li>Bit 3 = kcals On/Off</li>
+    </ul>
+    </td>
     <td></td>
     <td>Reports the supported LCD configurations.</td>
 </tr>
@@ -559,24 +563,32 @@ Bit 3 = kcals On/Off</td>
     <td>2</td>
     <td>FEATURE_ENABLE</td>
     <td>int</td>
-    <td>Bit 0 = Heart Rate Monitor,
-Bit 1 = Data Summary,
-Bit 2 = Sleep Mode,
-Bit 3 = Proximity Tagging,
-Bit 4 = Epoch Data,
-Bit 5 = No Raw Data</td>
+    <td>
+    <ul>
+    <li>Bit 0 = Heart Rate Monitor</li>
+    <li>Bit 1 = Data Summary</li>
+    <li>Bit 2 = Sleep Mode</li>
+    <li>Bit 3 = Proximity Tagging</li>
+    <li>Bit 4 = Epoch Data</li>
+    <li>Bit 5 = No Raw Data</li>
+    </ul>
+    </td>
     <td></td>
     <td>Enables or disables various features.</td>
-</tr>
-<tr>
+    </tr>
+    <tr>
     <td>1</td>
     <td>3</td>
     <td>DISPLAY_CONFIGURATION</td>
     <td>int</td>
-    <td>Bit 0 = Display On/Off (0=Off, 1=On)
-Bit 1 = 12/24-hour Time (0=12, 1=24)
-Bit 2 = Feedback On/Off (0=Off, 1=On)
-Bit 3 = kcals On/Off (0=Off, 1=On)</td>
+    <td>
+    <ul>
+    <li>Bit 0 = Display On/Off (0=Off, 1=On)</li>
+    <li>Bit 1 = 12/24-hour Time (0=12, 1=24)</li>
+    <li>Bit 2 = Feedback On/Off (0=Off, 1=On)</li>
+    <li>Bit 3 = kcals On/Off (0=Off, 1=On)</li>
+    </ul>
+    </td>
     <td></td>
     <td>Bit-flags for configuring LCD behavior in various modes.</td>
 </tr>
@@ -819,10 +831,14 @@ Bit 3 = kcals On/Off (0=Off, 1=On)</td>
     <td>44</td>
     <td>SENSOR_CONFIGURATION</td>
     <td>int</td>
-    <td>Bit 0 = IMU Accelerometer,
-Bit 1 = IMU Gyroscope,
-Bit 2 = IMU Magnetometer,
-Bit 3 = IMU Temperature</td>
+    <td>
+    <ul>
+    <li>Bit 0 = IMU Accelerometer</li>
+    <li>Bit 1 = IMU Gyroscope</li>
+    <li>Bit 2 = IMU Magnetometer</li>
+    <li>Bit 3 = IMU Temperature</li>
+    </ul>
+    </td>
     <td></td>
     <td>Enables or disables auxiliary sensors.</td>
 </tr>
