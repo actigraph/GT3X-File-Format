@@ -444,18 +444,17 @@ namespace DeviceUtilities
     <td>FEATURE_CAPABILITIES</td>
     <td>int</td>
     <td>
-    <p>Bit Fields</p>
-    <ol>
-    <li>Heart Rate Monitor</li>
-    <li>Data Summary</li>
-    <li>Sleep Mode</li>
-    <li>Proximity Tagging</li>
-    <li>Epoch Data</li>
-    <li>No Raw Data</li>
-    <li>IMU</li>
-    <li>Spare</li>
-    <li>Configurable Proximity Interval</li>
-    </ol>
+    <ul>
+    <li>Bit 0 - Heart Rate Monitor</li>
+    <li>Bit 1 - Data Summary</li>
+    <li>Bit 2 - Sleep Mode</li>
+    <li>Bit 3 - Proximity Tagging</li>
+    <li>Bit 4 - Epoch Data</li>
+    <li>Bit 5 - No Raw Data</li>
+    <li>Bit 6 - IMU</li>
+    <li>Bit 7 - Spare</li>
+    <li>Bit 8 - Configurable Proximity Interval</li>
+    </ul>
     </td>
     <td></td>
     <td>Reports the supported features of this hardware/firmware configuration.</td>
