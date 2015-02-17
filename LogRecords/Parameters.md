@@ -94,7 +94,7 @@ namespace DeviceUtilities
             if (0.0 > f)
                 code = (UInt32)(-(Int32)code);
             code &= SIGNIFICAND_MASK;
-            code |= ((UInt32)exponent &lt;< EXPONENT_OFFSET) & EXPONENT_MASK;
+            code |= ((UInt32)exponent &lt;&lt; EXPONENT_OFFSET) & EXPONENT_MASK;
 
             return code;
         }
