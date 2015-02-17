@@ -140,235 +140,235 @@ namespace DeviceUtilities
         <th>Data</th>
         <th>Interpretation</th>
     <tr>
-        <td>1E</td>
-        <td>start of frame</td>
+        <td><pre>1E</pre></td>
+        <td>Record separator</td>
     </tr>
     <tr>
-        <td>15</td>
-        <td>record type (PARAMETERS)</td>
+        <td><pre>15</pre></td>
+        <td>Record type: PARAMETERS</td>
     </tr>
     <tr>
-        <td>F2 24 D2 54</td>
-        <td>Wed, 04 Feb 2015 13:56:02 GMT</td>
+        <td><pre>F2 24 D2 54</pre></td>
+        <td>Timestamp: Wed, 04 Feb 2015 13:56:02 GMT</td>
     </tr>
     <tr>
-        <td>A8 01</td>
-        <td>payload size (424 bytes)</td>
+        <td><pre>A8 01</pre></td>
+        <td>Payload size: 424 bytes</td>
     </tr>
     <tr>
-        <td>00 00 06 00 02 00 00 00</td>
+        <td><pre>00 00 06 00 02 00 00 00</pre></td>
+        <td>BATTERY_STATE: normal</td>
+    </tr>
+    <tr>
+        <td><pre>00 00 07 00 81 95 41 03</pre></td>
+        <td>BATTERY_VOLTAGE: 4.1 V</td>
+    </tr>
+    <tr>
+        <td><pre>00 00 08 00 03 00 00 00</pre></td>
+        <td>BOARD_REVISION: 3</td>
+    </tr>
+    <tr>
+        <td><pre>00 00 09 00 27 AA 0D 54</pre></td>
+        <td>CALIBRATION_TIME: Mon, 08 Sep 2014 13:07:51 GMT</td>
+    </tr>
+    <tr>
+        <td><pre>00 00 0D 00 25 00 01 01</pre></td>
+        <td>FIRMWARE_VERSION: 01.01.37</td>
+    </tr>
+    <tr>
+        <td><pre>00 00 10 00 00 00 80 E4</pre></td>
+        <td>MEMORY_SIZE: 3.57 GB</td>
+    </tr>
+    <tr>
+        <td><pre>00 00 14 00 00 00 00 00</pre></td>
+        <td>Ignore</td>
+    </tr>
+    <tr>
+        <td><pre>00 00 15 00 00 00 00 00</pre></td>
+        <td>Ignore</td>
+    </tr>
+    <tr>
+        <td><pre>00 00 16 00 00 00 00 00</pre></td>
+        <td>Ignore</td>
+    </tr>
+    <tr>
+        <td><pre>00 00 17 00 00 00 00 00</pre></td>
+        <td>Ignore</td>
+    </tr>
+    <tr>
+        <td><pre>00 00 1A 00 02 00 00 00</pre></td>
+        <td>Ignore</td>
+    </tr>
+    <tr>
+        <td><pre>00 00 1C 00 7D 01 00 00</pre></td>
+        <td>FEATURE_CAPABILITIES: heart rate monitor, sleep mode, proximity tagging, epoch data, no raw data, IMU and configurable proximity interval</td>
+    </tr>
+    <tr>
+        <td><pre>00 00 1D 00 07 00 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 07 00 81 95 41 03</td>
+        <td><pre>00 00 20 00 01 00 01 01</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 08 00 03 00 00 00</td>
+        <td><pre>00 00 25 00 00 04 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 09 00 27 AA 0D 54</td>
+        <td><pre>00 00 26 00 00 00 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 0D 00 25 00 01 01</td>
+        <td><pre>00 00 31 00 00 00 40 0C</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 10 00 00 00 80 E4</td>
+        <td><pre>00 00 32 00 37 89 41 05</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 14 00 00 00 00 00</td>
+        <td><pre>00 00 33 00 07 3A 6D 03</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 15 00 00 00 00 00</td>
+        <td><pre>00 00 37 00 00 00 40 09</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 16 00 00 00 00 00</td>
+        <td><pre>00 00 39 00 AE 77 53 09</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 17 00 00 00 00 00</td>
+        <td><pre>00 00 3A 00 00 00 54 05</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 1A 00 02 00 00 00</td>
+        <td><pre>01 00 00 00 00 00 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 1C 00 7D 01 00 00</td>
+        <td><pre>01 00 01 00 44 D4 12 AF</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 1D 00 07 00 00 00</td>
+        <td><pre>01 00 02 00 14 01 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 20 00 01 00 01 01</td>
+        <td><pre>01 00 03 00 07 00 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 25 00 00 04 00 00</td>
+        <td><pre>01 00 04 00 49 FF FF FF</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 26 00 00 00 00 00</td>
+        <td><pre>01 00 05 00 1A FF FF FF</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 31 00 00 00 40 0C</td>
+        <td><pre>01 00 06 00 52 FF FF FF</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 32 00 37 89 41 05</td>
+        <td><pre>01 00 07 00 31 01 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 33 00 07 3A 6D 03</td>
+        <td><pre>01 00 08 00 20 01 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 37 00 00 00 40 09</td>
+        <td><pre>01 00 09 00 24 01 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 39 00 AE 77 53 09</td>
+        <td><pre>01 00 0A 00 1E 00 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>00 00 3A 00 00 00 54 05</td>
+        <td><pre>01 00 0C 00 E0 25 D2 54</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 00 00 00 00 00 00</td>
+        <td><pre>01 00 0D 00 70 85 D3 54</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 01 00 44 D4 12 AF</td>
+        <td><pre>01 00 0E 00 F2 24 D2 54</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 02 00 14 01 00 00</td>
+        <td><pre>01 00 0F 00 44 00 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 03 00 07 00 00 00</td>
+        <td><pre>01 00 10 00 1F 00 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 04 00 49 FF FF FF</td>
+        <td><pre>01 00 11 00 3F 00 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 05 00 1A FF FF FF</td>
+        <td><pre>01 00 14 00 00 00 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 06 00 52 FF FF FF</td>
+        <td><pre>01 00 15 00 00 00 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 07 00 31 01 00 00</td>
+        <td><pre>01 00 21 00 60 EA 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 08 00 20 01 00 00</td>
+        <td><pre>01 00 22 00 1E F8 FF FF</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 09 00 24 01 00 00</td>
+        <td><pre>01 00 23 00 A7 F7 FF FF</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 0A 00 1E 00 00 00</td>
+        <td><pre>01 00 24 00 DC F7 FF FF</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 0C 00 E0 25 D2 54</td>
+        <td><pre>01 00 25 00 1D 08 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 0D 00 70 85 D3 54</td>
+        <td><pre>01 00 26 00 A4 07 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 0E 00 F2 24 D2 54</td>
+        <td><pre>01 00 27 00 00 08 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 0F 00 44 00 00 00</td>
+        <td><pre>01 00 28 00 00 00 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 10 00 1F 00 00 00</td>
+        <td><pre>01 00 29 00 00 00 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 11 00 3F 00 00 00</td>
+        <td><pre>01 00 2A 00 FE FF FF FF</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 14 00 00 00 00 00</td>
+        <td><pre>01 00 2B 00 37 00 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 15 00 00 00 00 00</td>
+        <td><pre>01 00 2C 00 00 00 00 00</pre></td>
         <td></td>
     </tr>
     <tr>
-        <td>01 00 21 00 60 EA 00 00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>01 00 22 00 1E F8 FF FF</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>01 00 23 00 A7 F7 FF FF</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>01 00 24 00 DC F7 FF FF</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>01 00 25 00 1D 08 00 00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>01 00 26 00 A4 07 00 00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>01 00 27 00 00 08 00 00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>01 00 28 00 00 00 00 00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>01 00 29 00 00 00 00 00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>01 00 2A 00 FE FF FF FF</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>01 00 2B 00 37 00 00 00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>01 00 2C 00 00 00 00 00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>9B</td>
+        <td><pre>9B</pre></td>
         <td>checksum</td>
     </tr>
 </table>
