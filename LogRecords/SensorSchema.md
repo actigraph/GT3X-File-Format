@@ -4,8 +4,10 @@
 This record allows dynamic definition of a SENSOR_DATA record format.
 
 ## Format of Data ##
+COMING SOON
 
 ## Example ##
+COMING SOON
 
 ## Sample C# Parsing Code ##
 

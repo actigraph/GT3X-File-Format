@@ -4,8 +4,10 @@
 This record stores sensor data according to a SENSOR_SCHEMA definition.
 
 ## Format of Data ##
+COMING SOON
 
 ## Example ##
+COMING SOON
 
 ## Sample C# Parsing Code ##
 
