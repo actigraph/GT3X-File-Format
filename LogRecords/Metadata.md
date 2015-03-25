@@ -67,17 +67,24 @@ Offset = 8 + size (124) = 132
 ## Files Initialized in UTC ##
 Certain .gt3x files are initialized in [UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time "UTC wiki page"). These files were most likely initialized inside of [ActiGraph's web portal, Study Admin](http://www.actigraphcorp.com/product-category/study-admin/). A file's timestamps are in UTC if it contains the following:
 1. A metadata packet with *MetadataType* "LocalTimeLog"
-2. *UsedUtc* is set to true in the packet
+2. *UsedUtc* is set to true in the LocalTimeLog packet
 
-To determine how much to adjust the timestamps to match the local time zone, use the *UtcOffset* property. It is in the format HOURS:MINUTES:SECONDS. In the example below, the file was initialized in Central Time with an offset of -6 hours.
-
-### Example JSON ###
+### Example LocalTimeLog JSON ###
 ```json
 {
    "MetadataType":"LocalTimeLog",
+	...
+   "UsedUtc":true
+}
+```
+
+To determine how much to adjust the timestamps to match the local time zone, use the *UtcOffset* property in the *SubjectTimeLog* packet. It is in the format HOURS:MINUTES:SECONDS. In the example below, the file was initialized in Central Time with an offset of -6 hours.
+
+### Example LocalTimeLog JSON ###
+```
+{
+   "MetadataType":"SubjectTimeLog",
    "UtcOffset":"-06:00:00",
-   "Name":"(UTC-06:00) Central Time (US & Canada)",
-   "UsedUtc":true,
-   "Parsed":true
+   "Name":"(UTC-06:00) Central Time (US & Canada)"
 }
 ```
