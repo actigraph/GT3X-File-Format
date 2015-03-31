@@ -81,7 +81,7 @@ Certain .gt3x files are initialized in [UTC](http://en.wikipedia.org/wiki/Coordi
 To determine how much to adjust the timestamps to match the local time zone, use the *UtcOffset* property in the *SubjectTimeLog* packet. It is in the format HOURS:MINUTES:SECONDS. In the example below, the file was initialized in Central Time with an offset of -6 hours.
 
 ### Example SubjectTimeLog JSON ###
-```
+```json
 {
    "MetadataType":"SubjectTimeLog",
    "UtcOffset":"-06:00:00",
