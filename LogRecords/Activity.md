@@ -17,8 +17,23 @@ To convert the 12-bit values to 16-bit signed integers (Int16) for use, they mus
 Once a sample has been unpacked and the special conditions are accounted for, we must:
 
 1. Cast the UInt16 values into *signed* 16-bit values. 
-2. Scale the resultant by the scale factor (this gives us an acceleration value in g's). Device serial numbers starting with NEO and CLE use a scale factor of 341 LSB/g (±6g). MOS devices use a 256 LSB/g scale factor (±8g). If a LOG_PARAMETER record is preset, then the ACCEL_SCALE value should be used.
+2. Scale the resultant by the scale factor (this gives us an acceleration value in g's). Device serial numbers starting with NEO and CLE use a scale factor of 341 LSB/g (Â±6g). MOS devices use a 256 LSB/g scale factor (Â±8g). If a LOG_PARAMETER record is preset, then the ACCEL_SCALE value should be used.
 3. Round the value from #2 to three decimal places.
+
+## Issue with wGT3X-BT (Serial Numbers "MOS") firmware version 1.6.0 ##
+
+ActiGraph wGT3X-BT firmware version 1.6.0, released on Dec. 28, 2015, incorrectly rotates the axes of the accelerometer by 90 degrees about the Z-axis. Acceleration measured along the X-axis will appear as acceleration along the Y-axis, and acceleration measured along the Y-axis will appear along the X-axis. For a reference of the accelerometer orientation, see the [wGT3X-BT illustration here](https://help.theactigraph.com/entries/49654814).
+
+To account for this, please perform the following adjust to Activity data from MOS devices with 1.6.0 firmware:
+
+```c#
+var fixedX = sample.Y;
+var fixedY = -1 * sample.X;
+sample.Y = fixedY;
+sample.X = fixedX;
+```
+
+For more information, check out this help article: https://help.theactigraph.com/entries/107929323
 
 ## Example ##
 
