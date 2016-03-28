@@ -18,6 +18,34 @@ This documentation is valid for .gt3x files downloaded from the following device
 ## Invalid .gt3x Files ##
 **NOTE:** Devices with serial numbers that start with "NEO" or "MRA" and have firmware version of 2.5.0 or earlier use an older format of the .gt3x file. Please see this GitHub repo for more information: https://github.com/actigraph/NHANES-GT3X-File-Format
 
+## File Format
+
+The .gt3x file is a zip archive contains several files needed to parse activity data. Here are the different files:
+
+<table>
+  <tr>
+    	<th>FileName</th>
+    	<th>Description</th>
+  </tr>
+  <tr>
+    	<td>log.bin</td>
+    	<td>Log Records (see below)</td>
+  </tr>
+  <tr>
+    	<td><a href="info.txt.md">info.txt</a></td>
+    	<td>Device information including start date and download date.</td>
+  </tr>
+</table>
+
+## Steps to Parse Log Records from a .gt3x File
+
+1. Verify .gt3x file is a zip file
+2. Verify .gt3x file has log.bin file
+3. Verify .gt3x file has info.txt file
+4. Extract log.bin and info.txt files
+5. Parse and save the sample rate from the info.txt file (it's stored in Hz)
+6. Parse and save the start date from the info.txt file (it's stored in [.NET Ticks](http://msdn.microsoft.com/en-us/library/system.datetime.ticks.aspx))
+
 ## Log Records ##
 Binary .gt3x file data is grouped into timestamped records of varying types that are written sequentially as the data becomes available on the activity monitor. The format is similar to common protocols used for serial communication. Each log record includes a header with a record separator, record type, timestamp and payload size. After the variable length payload is a checksum for ensuring data integrity.
 
