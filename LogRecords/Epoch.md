@@ -4,7 +4,3 @@
 
 
 ## Format of Data ##
-
-## Example ##
-
-## Notes ##

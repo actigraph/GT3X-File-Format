@@ -186,7 +186,7 @@ Note that some undocumented records are used for internal state or testing. They
    </tr>
    <tr>
       <td>9</td>
-      <td>EPOCH</td>
+      <td><a href=LogRecords/Epoch.md>EPOCH</a></td>
       <td>60-second epoch data</td>
    </tr>
    <tr>
@@ -196,7 +196,7 @@ Note that some undocumented records are used for internal state or testing. They
    </tr>
    <tr>
       <td>12</td>
-      <td>EPOCH2</td>
+      <td><a href=LogRecords/Epoch2.md>EPOCH2</a></td>
       <td>60-second epoch data</td>
    </tr>
    <tr>
@@ -211,12 +211,12 @@ Note that some undocumented records are used for internal state or testing. They
    </tr>
    <tr>
       <td>15</td>
-      <td>EPOCH3</td>
+      <td><a href=LogRecords/Epoch3.md>EPOCH3</a></td>
       <td>60-second epoch data</td>
    </tr>
    <tr>
       <td>16</td>
-      <td>EPOCH4</td>
+      <td><a href=LogRecords/Epoch4.md>EPOCH4</a></td>
       <td>60-second epoch data</td>
    </tr>
    <tr>
