@@ -185,9 +185,19 @@ Note that some undocumented records are used for internal state or testing. They
       <td>13 Byte Serial, 1 Byte Tx Power, 1 Byte (signed) RSSI</td>
    </tr>
    <tr>
+      <td>9</td>
+      <td>EPOCH</td>
+      <td>60-second epoch data</td>
+   </tr>
+   <tr>
       <td>11</td>
       <td><a href=LogRecords/HeartRateAnt.md>HEART_RATE_ANT</a></td>
       <td>Heart Rate RR information from ANT+ sensor.</td>
+   </tr>
+   <tr>
+      <td>12</td>
+      <td>EPOCH2</td>
+      <td>60-second epoch data</td>
    </tr>
    <tr>
       <td>13</td>
@@ -198,6 +208,16 @@ Note that some undocumented records are used for internal state or testing. They
       <td>14</td>
       <td><a href=LogRecords/HeartRateBLE.md>HEART_RATE_BLE</a></td>
       <td>Bluetooth heart rate information (BPM and RR). This is a Bluetooth standard format.</td>
+   </tr>
+   <tr>
+      <td>15</td>
+      <td>EPOCH3</td>
+      <td>60-second epoch data</td>
+   </tr>
+   <tr>
+      <td>16</td>
+      <td>EPOCH4</td>
+      <td>60-second epoch data</td>
    </tr>
    <tr>
       <td>21</td>
