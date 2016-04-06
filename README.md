@@ -150,92 +150,116 @@ Binary .gt3x file data is grouped into timestamped records of varying types that
 Note that some undocumented records are used for internal state or testing. They may be safely ignored.
 <table>
    <tr>
-      <th>ID</th>
+      <th>ID (dec)</th>
+      <th>ID (hex)</th>
       <th>Type</th>
       <th>Description</th>
    </tr>
    <tr>
       <td>0</td>
+      <td>0x00</td>
       <td><a href=LogRecords/Activity.md>ACTIVITY</a></td>
       <td>One second of raw activity samples packed into 12-bit values in YXZ order.</td>
    </tr>
    <tr>
       <td>2</td>
-      <td><a>BATTERY</a></td>
+      <td>0x02</td>
+      <td>BATTERY</td>
       <td>Battery voltage in millivolts as a little-endian unsigned short (2 bytes).</td>
    </tr>
    <tr>
+      <td>3</td>
+      <td>0x03</td>
+      <td>EVENT</td>
+      <td>Logging records used for internal debugging.</td>
+   </tr>
+   <tr>
       <td>4</td>
-      <td><a>HEART_RATE_BPM</a></td>
+      <td>0x04</td>
+      <td>HEART_RATE_BPM</td>
       <td>Heart rate average beats per minute (BPM) as one byte unsigned integer.</td>
    </tr>
    <tr>
       <td>5</td>
-      <td><a>LUX</a></td>
+      <td>0x05</td>
+      <td>LUX</td>
       <td>Lux value as a little-endian unsigned short (2 bytes).</td>
    </tr>
    <tr>
       <td>6</td>
+      <td>0x06</td>
       <td><a href=LogRecords/Metadata.md>METADATA</a></td>
       <td>Arbitrary metadata content. The first record in every log is contains subject data in JSON format.</td>
    </tr>
    <tr>
       <td>7</td>
+      <td>0x07</td>
       <td><a href=LogRecords/Tag.md>TAG</a></td>
       <td>13 Byte Serial, 1 Byte Tx Power, 1 Byte (signed) RSSI</td>
    </tr>
    <tr>
       <td>9</td>
+      <td>0x09</td>
       <td><a href=LogRecords/Epoch.md>EPOCH</a></td>
       <td>60-second epoch data</td>
    </tr>
    <tr>
       <td>11</td>
+      <td>0x0B</td>
       <td><a href=LogRecords/HeartRateAnt.md>HEART_RATE_ANT</a></td>
       <td>Heart Rate RR information from ANT+ sensor.</td>
    </tr>
    <tr>
       <td>12</td>
+      <td>0x0C</td>
       <td><a href=LogRecords/Epoch2.md>EPOCH2</a></td>
       <td>60-second epoch data</td>
    </tr>
    <tr>
       <td>13</td>
+      <td>0x0D</td>
       <td><a href=LogRecords/Capsense.md>CAPSENSE</a></td>
       <td>Capacitive sense data</td>
    </tr>
    <tr>
       <td>14</td>
+      <td>0x0E</td>
       <td><a href=LogRecords/HeartRateBLE.md>HEART_RATE_BLE</a></td>
       <td>Bluetooth heart rate information (BPM and RR). This is a Bluetooth standard format.</td>
    </tr>
    <tr>
       <td>15</td>
+      <td>0x0F</td>
       <td><a href=LogRecords/Epoch3.md>EPOCH3</a></td>
       <td>60-second epoch data</td>
    </tr>
    <tr>
       <td>16</td>
+      <td>0x10</td>
       <td><a href=LogRecords/Epoch4.md>EPOCH4</a></td>
       <td>60-second epoch data</td>
    </tr>
    <tr>
       <td>21</td>
+      <td>0x15</td>
       <td><a href=LogRecords/Parameters.md>PARAMETERS</a></td>
       <td>Records various configuration parameters and device attributes on initialization.</td>
    </tr>
    <tr>
       <td>24</td>
+      <td>0x18</td>
       <td><a href=LogRecords/SensorSchema.md>SENSOR_SCHEMA</a></td>
       <td>This record allows dynamic definition of a SENSOR_DATA record format.</td>
    </tr>
    <tr>
       <td>25</td>
+      <td>0x19</td>
       <td><a href=LogRecords/SensorData.md>SENSOR_DATA</a></td>
       <td>This record stores sensor data according to a SENSOR_SCHEMA definition.</td>
    </tr>
    <tr>
       <td>26</td>
+      <td>0x1A</td>
       <td><a href=LogRecords/Activity2.md>ACTIVITY2</a></td>
       <td>One second of raw activity samples as little-endian signed-shorts in XYZ order.</td>
    </tr>
