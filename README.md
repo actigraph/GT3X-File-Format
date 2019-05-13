@@ -279,7 +279,7 @@ The .gt3x file also contains record types utilized internally by ActiGraph engin
       <td>19</td>
       <td>0x13</td>
       <td>FIFO_ERROR</td>
-      <td>Records timestamp of Fifo Error</td>
+      <td>Records timestamp of FIFO Error</td>
    </tr>
   <tr>
       <td>20</td>
