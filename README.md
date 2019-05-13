@@ -265,6 +265,31 @@ Note that some undocumented records are used for internal state or testing. They
    </tr>
 </table>
 
+### Internal/Diagnostic Log Record Types ###
+The .gt3x file also contains record types utilized internally by ActiGraph engineers for diagnostic purposes. Records with these types can be ignored (or skipped over). The following are record types utilized for diagnostic purposes:
+
+<table>
+   <tr>
+      <th>ID (dec)</th>
+      <th>ID (hex)</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+   <tr>
+      <td>19</td>
+      <td>0x13</td>
+      <td>FIFO_ERROR</td>
+      <td>Records timestamp of FIFO Error</td>
+   </tr>
+  <tr>
+      <td>20</td>
+      <td>0x14</td>
+      <td>FIFO_DUMP</td>
+      <td>FIFO diagnostic record recorded if enabled and an error is detected</td>
+   </tr>
+</table>
+
+
 ### Checksum Calculation ###
 A 1-byte checksum immediately follows the record payload. It is a 1's complement, exclusive-or (XOR) of the log header and payload with an initial value of zero.
 
