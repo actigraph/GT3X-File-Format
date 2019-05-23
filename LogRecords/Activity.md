@@ -21,7 +21,7 @@ Once a sample has been unpacked and the special conditions are accounted for, we
 3. Round the value from #2 to three decimal places.
 
 ## Activity Log Record Type with 1-Byte Payload ##
-An 'Activity' (id: 0x00) log record type with a 1-byte payload is captured on a USB connection event (and does not represent a reading from the activity monitor's accelerometer). This event is captured upon docking the activity monitor (via USB) to a PC or CentrePoint Data Hub (CDH) device. Therefore such records cannot be parsed as the traditional activity log record which consists of YXZ samples. 
+An 'Activity' (id: 0x00) log record type with a 1-byte payload is captured on a USB connection event (and does not represent a reading from the activity monitor's accelerometer). This event is captured upon docking the activity monitor (via USB) to a PC or CentrePoint Data Hub (CDH) device. Therefore such records cannot be parsed as the traditional activity log records and can be ignored. 
 
 ## Issue with wGT3X-BT (Serial Numbers "MOS") firmware version 1.6.0 ##
 
