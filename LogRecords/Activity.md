@@ -20,6 +20,9 @@ Once a sample has been unpacked and the special conditions are accounted for, we
 2. Scale the resultant by the scale factor (this gives us an acceleration value in g's). Device serial numbers starting with NEO and CLE use a scale factor of 341 LSB/g (±6g). MOS devices use a 256 LSB/g scale factor (±8g). If a LOG_PARAMETER record is preset, then the ACCEL_SCALE value should be used.
 3. Round the value from #2 to three decimal places.
 
+## Activity Log Record Type with 1-Byte Payload ##
+An 'Activity' (id: 0x00) log record type with a 1-byte payload is captured on a USB connection event (and does not represent a reading from the activity monitor's accelerometer). This event is captured upon docking the activity monitor (via USB) to a PC or CentrePoint Data Hub (CDH) device. Therefore such records cannot be parsed as the traditional activity log record which consists of YXZ samples. 
+
 ## Issue with wGT3X-BT (Serial Numbers "MOS") firmware version 1.6.0 ##
 
 ActiGraph wGT3X-BT firmware version 1.6.0, released on Dec. 28, 2015, incorrectly rotates the axes of the accelerometer by 90 degrees about the Z-axis. Acceleration measured along the X-axis will appear as acceleration along the Y-axis, and acceleration measured along the Y-axis will appear along the X-axis. For a reference of the accelerometer orientation, see the [wGT3X-BT illustration here](https://help.theactigraph.com/entries/49654814).
