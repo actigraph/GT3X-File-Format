@@ -12,7 +12,7 @@ Once a sample has been parsed we must:
 2. Round the value from #2 to three decimal places.
 
 ## Activity Log Record Type with 1-Byte Payload ##
-An 'Activity2' (id: 0x1A) log record type with a 1-byte payload is captured on a USB connection event (and does not represent a reading from the activity monitor's accelerometer). This event is captured upon docking the activity monitor (via USB) to a PC or CentrePoint Data Hub (CDH) device. Therefore such records cannot be parsed as the traditional activity log record which consists of YXZ samples. 
+An 'Activity2' (id: 0x1A) log record type with a 1-byte payload is captured on a USB connection event (and does not represent a reading from the activity monitor's accelerometer). This event is captured upon docking the activity monitor (via USB) to a PC or CentrePoint Data Hub (CDH) device. Therefore such records cannot be parsed as the traditional activity log records and can be ignored.
 
 
 ## Example ##
