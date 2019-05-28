@@ -11,6 +11,10 @@ Once a sample has been parsed we must:
 1. Scale the resultant by the scale factor (this gives us an acceleration value in g's). Device serial numbers starting with NEO and CLE use a scale factor of 341 LSB/g (±6g). MOS devices use a 256 LSB/g scale factor (±8g). If a LOG_PARAMETER record is preset, then the ACCEL_SCALE value should be used.
 2. Round the value from #2 to three decimal places.
 
+## Activity Log Record Type with 1-Byte Payload ##
+An 'Activity2' (id: 0x1A) log record type with a 1-byte payload is captured on a USB connection event (and does not represent a reading from the activity monitor's accelerometer). This event is captured upon docking the activity monitor (via USB) to a PC or CentrePoint Data Hub (CDH) device. Therefore such records cannot be parsed as the traditional activity log records and can be ignored.
+
+
 ## Example ##
 ```
 0x00 0x00 0x00 0x00 0x00 0x00 0x30 0x00 0xcc 0xff 0x42 0x01 0x03 0x00 0xfa 0xff
