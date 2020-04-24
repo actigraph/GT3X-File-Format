@@ -8,7 +8,9 @@ The content of this record may vary in number and types of variables. It is safe
 ## Format of Data ##
 The record payload is of variable length consisting of 8-byte key/value pairs. The key is made up of a 16-bit unsigned address space and 16-bit unsigned identifier. All values are encoded in a 32-bit unsigned integer. The address space, identifier and value are in little-endian byte order.
 
-Floating point values are encoded using a three-byte fraction and one-byte exponent. The fraction is a two’s-complement integer; its absolute value is 2<sup>23</sup> times the floating-point value’s mantissa (which is always between 0.5 inclusive and 1.0 not inclusive, i.e. the floating-point value is normalized), and its sign is that of the floating-point value. The exponent is a two’s-complement 8-bit number, signifying a power of 2 from -128 to +127. A zero value is represented by fraction and exponent both zero.
+Floating point values are encoded using a three-byte fraction and one-byte exponent. The fraction is a twoâ€™s-complement integer; its absolute value is 2<sup>23</sup> times the floating-point valueâ€™s mantissa (which is always between 0.5 inclusive and 1.0 not inclusive, i.e. the floating-point value is normalized), and its sign is that of the floating-point value. The exponent is a twoâ€™s-complement 8-bit number, signifying a power of 2 from -128 to +127. A zero value is represented by fraction and exponent both zero.
+
+The floating-point encoding comes from the following paper: https://www.scribd.com/document/98159712/Simple-Serial-Protocol-SSP
 
 The following C# code performs the described floating-point encoding and decoding:
 <pre>
@@ -229,7 +231,7 @@ namespace DeviceUtilities
     </tr>
     <tr>
         <td><pre>00 00 33 00 07 3A 6D 03</pre></td>
-        <td>IMU_MAG_SCALE: 6.827 LSB/µT</td>
+        <td>IMU_MAG_SCALE: 6.827 LSB/ÂµT</td>
     </tr>
     <tr>
         <td><pre>00 00 37 00 00 00 40 09</pre></td>
@@ -237,11 +239,11 @@ namespace DeviceUtilities
     </tr>
     <tr>
         <td><pre>00 00 39 00 AE 77 53 09</pre></td>
-        <td>IMU_TEMP_SCALE: 333.87 LSB/°C</td>
+        <td>IMU_TEMP_SCALE: 333.87 LSB/Â°C</td>
     </tr>
     <tr>
         <td><pre>00 00 3A 00 00 00 54 05</pre></td>
-        <td>IMU_TEMP_OFFSET: 21 °C</td>
+        <td>IMU_TEMP_OFFSET: 21 Â°C</td>
     </tr>
     <tr>
         <td><pre>01 00 00 00 00 00 00 00</pre></td>
@@ -508,7 +510,7 @@ namespace DeviceUtilities
     <td>IMU_MAG_SCALE</td>
     <td>float</td>
     <td></td>
-    <td>LSB/µT</td>
+    <td>LSB/ÂµT</td>
     <td>Scale factor for conversion to microTesla.</td>
 </tr>
 <tr>
@@ -653,7 +655,9 @@ namespace DeviceUtilities
     <td>int</td>
     <td></td>
     <td>Hz</td>
-    <td>30, 40, 50, 60, 70, 80, 90 or 100 Hz</td>
+    <td>30, 40, 50, 60, 70, 80, 90 or 100 Hz<br><br>
+    Sample rate is an unsigned integer and shall NOT be encoded.
+    </td>
 </tr>
 <tr>
     <td>1</td>
