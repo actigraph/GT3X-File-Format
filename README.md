@@ -289,7 +289,7 @@ The .gt3x file also contains record types utilized internally by ActiGraph engin
    </tr>
 </table>
 
-### Extra Bytes with 0's between valid records ###
+### Extra bytes with 0's between valid records ###
 There's a rare occurrence where extra bytes with 0's can appear between valid records. If such bytes occur, this does not mean that the data is corrupted. These bytes can be ignored (or skipped over). 
 
 ### Checksum Calculation ###
