@@ -289,6 +289,8 @@ The .gt3x file also contains record types utilized internally by ActiGraph engin
    </tr>
 </table>
 
+### Extra Bytes w/ 0's between valid records ###
+There's a rare occurrence where extra bytes with 0's can appear between valid recrods. If such bytes occur, this does not mean that the data is corrupted. These bytes can be ignored (or skipped over).
 
 ### Checksum Calculation ###
 A 1-byte checksum immediately follows the record payload. It is a 1's complement, exclusive-or (XOR) of the log header and payload with an initial value of zero.
