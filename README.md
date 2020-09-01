@@ -46,7 +46,7 @@ The .gt3x file is a zip archive contains several files needed to parse activity 
 5. Parse and save the sample rate from the info.txt file (it's stored in Hz)
 6. Parse and save the start date from the info.txt file (it's stored in [.NET Ticks](http://msdn.microsoft.com/en-us/library/system.datetime.ticks.aspx))
 
-## Sample GT3X Parser
+## Sample GT3X File Parser
 
 [Here](gt3xSampleParser) is a sample GT3X File Parser in C#
 
