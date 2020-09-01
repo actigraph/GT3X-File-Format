@@ -318,7 +318,7 @@ public UInt32 ToUnixTime(DateTime datetime)
 }
 ```
 
-#### Sample GT3X File Parser #
+### Sample GT3X File Parser ###
 
 [Here](gt3xSampleParser) is a sample GT3X File Parser in the C# Programming Language.
 
