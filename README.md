@@ -46,6 +46,10 @@ The .gt3x file is a zip archive contains several files needed to parse activity 
 5. Parse and save the sample rate from the info.txt file (it's stored in Hz)
 6. Parse and save the start date from the info.txt file (it's stored in [.NET Ticks](http://msdn.microsoft.com/en-us/library/system.datetime.ticks.aspx))
 
+## Sample GT3X Parser
+
+[Here](Here) is a sample GT3X File Parser in C#
+
 ## Log Records ##
 Binary .gt3x file data is grouped into timestamped records of varying types that are written sequentially as the data becomes available on the activity monitor. The format is similar to common protocols used for serial communication. Each log record includes a header with a record separator, record type, timestamp and payload size. After the variable length payload is a checksum for ensuring data integrity.
 
