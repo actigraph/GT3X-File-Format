@@ -171,7 +171,7 @@ Note that some undocumented records are used for internal state or testing. They
       <td>3</td>
       <td>0x03</td>
       <td>EVENT</td>
-      <td>Logging records used for internal debugging.</td>
+      <td>Logging records used for internal debugging. These records notably contain information about idle sleep mode. When entering idle sleep mode, a record with payload 0x08 is created. When existing idle sleep mode, a record with payload 0x09 is created.</td>
    </tr>
    <tr>
       <td>4</td>
