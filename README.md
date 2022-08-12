@@ -326,3 +326,7 @@ public UInt32 ToUnixTime(DateTime datetime)
 
 * [Daniel Judge](https://github.com/dwjref "Daniel's GitHub Profile") - Software Architect
 * [Judge Maygarden](https://github.com/jmaygarden "Judge's GitHub Profile") - Firmware Engineer
+
+### Questions and Comments ###
+
+If you have any other questions or comments, please reach out to [Actigraph](https://actigraphcorp.my.site.com/support/s/contactsupport) for more information.
