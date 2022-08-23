@@ -45,6 +45,11 @@ The items are stored as "{key}: {value}" without the quotes.
     <td>long (64-bit signed integer)</td>
   </tr>
   <tr>
+    <td>Last Sample Time</td>
+    <td>The date and time of the last sample. If using ActiSync or ActiLife, this value will match the Stop Date if there is a stop date set; Otherwise, this will be the current UTC time on the activity monitor at the time of download.</td>
+    <td>string</td>
+  </tr>
+  <tr>
     <td>Download Date</td>
     <td>The date and time that the device was downloaded. It's stored in <a href=http://msdn.microsoft.com/en-us/library/system.datetime.ticks.aspx>.NET Ticks</a></td>
     <td>long (64-bit signed integer)</td>
