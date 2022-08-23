@@ -47,7 +47,7 @@ The items are stored as "{key}: {value}" without the quotes.
   <tr>
     <td>Last Sample Time</td>
     <td>The date and time of the last sample. If using ActiSync or ActiLife, this value will match the Stop Date if there is a stop date set; Otherwise, this will be the current UTC time on the activity monitor at the time of download.</td>
-    <td>string</td>
+    <td>long (64-bit signed integer)</td>
   </tr>
   <tr>
     <td>Download Date</td>
